@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Confirmation</title>
+  <style>
+  .card {
+    width: 444px
+}
+
+body {
+    background: #eee
+}
+  </style>
+</head>
+<body onload="myFunction()">
+<script>
+function myFunction() {
+  // Retrieve
+ var cartdata = JSON.parse(localStorage.getItem("__cart"));
+ var sum =0;
+  for (var i = 0; i < cartdata.length; i++) {
+    var data = cartdata[i];
+	console.log(data.price);
+	<!--sum = sum + data.price;-->
+	console.log(sum);
+	var table = document.getElementById("myTable");
+	var row = table.insertRow(i+1);
+	var cell1 = row.insertCell(0);
+	var cell2 = row.insertCell(1);
+	var cell3 = row.insertCell(2);
+	cell1.innerHTML = data.name;
+    cell2.innerHTML = data.quantity;
+    cell3.innerHTML = "₹" + (data.price * data.quantity).toFixed(2) ;
+  sum = sum + (data.price * data.quantity);
+  console.log(sum);
+  cell3.classList.add('text-right');  
+  }
+  
+    var table = document.getElementById("totalSum");
+	var row = table.insertRow(0);
+	var cell1 = row.insertCell(0);
+	var cell2 = row.insertCell(1);
+	var cell3 = row.insertCell(2);
+	cell1.innerHTML = "";
+    cell2.innerHTML = String("Total:").bold();
+    cell3.innerHTML = "₹" + sum.toFixed(2) ;
+    cell2.classList.add('text-right');
+    cell3.classList.add('text-right');
+
+  localStorage.removeItem('__cart');
+}
+
+
+
+</script>
+
+<div class="d-flex justify-content-center container mt-5">
+    <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
+        <div class="about-product text-center mt-2"><img style=" margin: 35px;" src="./images/png.png" width="300">
+            <div>
+                <h6>Creativity for all</h6>
+                <h6 class="mt-0 text-black-50">Your Subscribed to:</h6>
+            </div>
+        </div>
+        <table id="myTable">
+		<tr>
+    <th>Subscription</th>
+    <th >Years</th>
+	<th class="text-right">Amount</th>
+  </tr>
+		</table>
+		<br>
+		<table id="totalSum"></table>
+			<br>
+        <!--<div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Total</span><span>$7,197.00</span></div>-->
+    </div>
+</div>
+</body>
+
+</html>

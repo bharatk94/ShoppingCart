@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 	<style>
+  @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Handlee|Patrick+Hand&display=swap');
+ </style> -->
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Adobe Creative Cloud | Details &amp; Products | Adobe</title>
+	<script src="https://kit.fontawesome.com/340baedc9a.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/style.css"> 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://unpkg.com/cart-localstorage@1.1.4/dist/cart-localstorage.min.js" type="text/javascript"></script>
+
+	<style>
+.centerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; 
+}
+</style>
+
+	</head>
+
+<body>
+	<header> <img class="logo" src="./images/Adobe-logo.png" alt="">
+		<nav>
+			<ul>
+				<li><a href="index.html" class="activate">Adobe Creative Cloud</a></li>
+				<li><a href="">Explore</a></li>
+				<li><a href="">For Business</a></li>
+				<li><a href="">Compare Plans</a></li>
+				<li><a href="">Learn & Support</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main> <img src="./images/creative-cloud-logo.jpeg" alt="image1" class="img1">
+		<h1>Creativity for all.</h1>
+		<h2 class="h-2">Adobe Creative Cloud gives you the world’s best creative apps and services so you can make anything you can imagine, wherever you’re inspired.</h2>
+		<h3>What is Creative Cloud?</h3>
+		<p>Creative Cloud is a collection of 20+ desktop and mobile apps and services for photography, design, video, web, UX and more. Now you can take your ideas to new places with Photoshop on the iPad, draw and paint with Adobe Fresco and design for 3D and AR. Join our global creative community — and make something better together.</p>
+		<h2>Adobe products subscription</h2>
+	
+		<div class="container">
+	 		<div class="card-deck mt-4 mb-4 text-center">
+			
+			<div class="card mb-4 shadow-sm">
+				<div class="card-header">
+					<h4 class="my-0 font-weight-normal">Photoshop</h4>
+				</div>
+				<div class="card-body">
+					<p class="card-title pricing-card-title">₹1,675.60/month Inclusive of GST</p>
+					<button id="myBtn1" type="button" name="individual" class="btn btn-block btn-outline-primary"
+						onClick="cartLS.add({id: 1, name: 'Photoshop', price: 20107.2})">Add to
+						Cart</button>
+				</div>
+			</div>
+						<div class="card mb-4 shadow-sm">
+				<div class="card-header">
+					<h4 class="my-0 font-weight-normal">Illustrator</h4>
+				</div>
+				<div class="card-body">
+					<p class="card-title pricing-card-title">₹1,675.60 /month Inclusive of GST</p>
+					<button id="myBtn2" type="button" class="btn btn-block btn-outline-primary"
+						onClick="cartLS.add({id: 2, name: 'Illustrator', price: 20107.2})">Add to
+						Cart</button>
+				</div>
+			</div>
+			<div class="card mb-4 shadow-sm">
+				<div class="card-header">
+					<h4 class="my-0 font-weight-normal">Premiere Rush</h4>
+				</div>
+				<div class="card-body">
+					<p class="card-title pricing-card-title">₹1,675.60 /month Inclusive of GST</p>
+					<button id="myBtn3" type="button" class="btn btn-block btn-outline-primary"
+						onClick="cartLS.add({id: 3, name: 'Premiere Rush', price: 20107.2})">Add to
+						Cart</button>
+				</div>
+			</div>
+			<div class="card mb-4 shadow-sm">
+				<div class="card-header">
+					<h4 class="my-0 font-weight-normal">After Effects</h4>
+				</div>
+				<div class="card-body">
+				<p class="card-title pricing-card-title">₹1,675.60 /month Inclusive of GST</p>
+					<button id="myBtn4" type="button" class="btn btn-block btn-outline-primary"
+						onClick="cartLS.add({id: 4, name: 'After Effects', price: 20107.2})">Add to
+						Cart</button>
+				</div>
+			</div>
+			<div class="card mb-4 shadow-sm">
+				<div class="card-header">
+					<h4 class="my-0 font-weight-normal">All Apps</h4>
+				</div>
+				<div class="card-body">
+					<p class="card-title pricing-card-title">₹4,230.30/month Inclusive of GST</p>
+					<button id="myBtn5" type="button" name="all" class="btn btn-block btn-outline-primary"
+						onClick="cartLS.add({id: 5, name: 'All Apps', price: 4230.30});disableBtn();cartLS.remove(1);cartLS.remove(2);cartLS.remove(3);cartLS.remove(4);">Add to
+						Cart</button>
+				</div>
+			</div>
+			
+		</div>
+<p> **Only annual subscription available (i.e. 12 months)</p>
+		<div class="card mb-4 shadow-sm">
+			<div class="card-header">
+				<h2>Cart</h2>
+			</div>
+			<div class="card-body">
+				<table class="table">
+					<tbody class="cart">
+					</tbody>
+					<thead>
+						<!--<td>S.No.</td>-->
+						<td>Subscription</td>
+						<td>Year</td>
+						<td></td>
+						<td></td>
+						<td class="text-right">Yearly Price</td>
+						<td class="text-right"></td>
+						<td class="text-right"></td>
+					</thead>
+					<tfoot>
+						<!--<td></td>-->
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="text-right">Total: <strong class="total"></strong></td>
+						<td></td>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+	</div>
+		<div class="centerButton">
+		<button id="checkout" type="button" class="btn btn-sm btn-outline-primary" style="width: 15%;" onclick="storeValues();location.href='confirmation.html'">Checkout</button>
+		</div>
+		
+		<script>
+		
+function storeValues() {
+	
+  localStorage.setItem("cart", "Smasdasdith");
+		}
+		
+		
+		
+		function disableBtn() {
+			document.getElementById("myBtn1").disabled = true;
+			document.getElementById("myBtn2").disabled = true;
+			document.getElementById("myBtn3").disabled = true;
+			document.getElementById("myBtn4").disabled = true;
+}
+
+	function enableBtn() {
+		document.getElementById("myBtn1").disabled = false;
+		document.getElementById("myBtn2").disabled = false;
+		document.getElementById("myBtn3").disabled = false;
+		document.getElementById("myBtn4").disabled = false;
+}
+		function renderCart(items) {
+			const $cart = document.querySelector(".cart")
+			const $total = document.querySelector(".total")
+			
+			$cart.innerHTML = items.map((item) => `
+					<tr>
+						
+						<td>${item.name}</td>
+						<td>${item.quantity}</td>
+						<td style="width: 60px;">	
+							<button type="button" class="btn btn-block btn-sm btn-outline-primary"
+								onClick="cartLS.quantity(${item.id},1)">+</button>
+						</td>
+						<td style="width: 60px;">	
+							<button type="button" class="btn btn-block btn-sm btn-outline-primary"
+								onClick="cartLS.quantity(${item.id},-1)">-</button>
+						</td>
+						<td class="text-right">₹${item.price}</td>
+						<td class="text-right"><Button class="btn btn-primary" onClick="if(${item.id} == 5){enableBtn();};cartLS.remove(${item.id});">Delete</Button></td>
+					</tr>`).join("")
+				
+				if(cartLS.total() > 9999)
+				  {var sum = cartLS.total().toFixed(1);}
+				  else
+				  {var sum = cartLS.total().toFixed(2);}
+			$total.innerHTML = "₹" + sum
+		                            }
+		
+		renderCart(cartLS.list())
+		cartLS.onChange(renderCart)
+	</script>
+		
+		
+	<footer>
+	<p>Copyright &copy; 2021. All Rights Reserved</p>
+	</footer>
+</body>
+
+</html>
